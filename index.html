@@ -32,12 +32,28 @@
 
 <body>
 
+    <div class="loading-screen">
+        <div class="bg-load"></div>
+        <div class="loadScreen-elements">
+
+            <!-- LOAD BAR -->
+            <div class="ldBar" data-type="fill" data-img="assets/load-img.png" data-fill-background="transparent"
+                data-fill-dir="ltr" data-img-size="100,100"></div>
+            <!-- TXT -->
+            <div class="load-txt-container">
+                <img src="assets/load-txt.png" class="load-txt-1">
+                <img src="assets/load-txt-click.png" class="load-txt-2">
+            </div>
+
+        </div>
+    </div>
+
     <div class="container">
         <!-- <audio id="flock-audio" src="assets/flock.mp3" autoplay loop></audio> -->
         <!-- <audio id="sea-audio" src="assets/WavesLoops_Agitado_v3.mp3" autoplay loop></audio> -->
         <!-- <audio id="waves-audio" src="assets/waves.mp3" autoplay loop></audio> -->
         <a-scene vr-mode-ui="enabled: false" cursor="rayOrigin: mouse; fuse: false;">
-            <a-sound src="src: url(assets/waves.mp3)" autoplay="true" loop="true"></a-sound>
+            <!-- <a-sound src="src: url(assets/waves.mp3)" autoplay="true" loop="true"></a-sound> -->
             <!-- ASSETS -->
             <!-- <a-asset-item id="seagull" src="assets/scene.gltf"></a-asset-item> -->
             <a-assets>
@@ -149,21 +165,7 @@
         </a-scene>
     </div>
 
-    <div class="loading-screen">
-        <div class="bg-load"></div>
-        <div class="loadScreen-elements">
 
-            <!-- LOAD BAR -->
-            <div class="ldBar" data-type="fill" data-img="assets/load-img.png" data-fill-background="transparent"
-                data-fill-dir="ltr" data-img-size="100,100"></div>
-            <!-- TXT -->
-            <div class="load-txt-container">
-                <img src="assets/load-txt.png" class="load-txt-1">
-                <img src="assets/load-txt-click.png" class="load-txt-2">
-            </div>
-
-        </div>
-    </div>
 
     <!-- SCRIPTS -->
     <script src="js/loading-bar.min.js"></script>
