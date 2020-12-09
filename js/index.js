@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
             gsap.to(".loading-screen", .3, { opacity: 0, display: 'none', ease: "power2.out" });
 
 
-            var audio_file = new Audio("../assets/WavesLoops_Agitado_v3_1.mp3");
+            var audio_file = new Audio("../assets/waves.mp3");
             audio_file.play();
             audio_file.volume = .4;
             audio_file.addEventListener('timeupdate', function () {
