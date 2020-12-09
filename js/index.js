@@ -7,15 +7,13 @@ window.addEventListener("load", function () {
     bar.set(100);
     gsap.to(".load-txt-1", .6, { opacity: 0, ease: "power2.out", delay: .7 });
     gsap.to(".load-txt-2", .6, { opacity: 1, ease: "power2.out", delay: .8 });
-    var audio_file = new Audio("../assets/waves.mp3");
-    // cursor="rayOrigin: mouse"
-    // document.getElementById("#scene").setAttribute("cursor", "rayOrigin: mouse");
+
     document.body.addEventListener("click", function () {
         if (firstClick) {
             gsap.to(container, 1, { opacity: 1, ease: "power2.out" });
             gsap.to(".loading-screen", .3, { opacity: 0, display: 'none', ease: "power2.out" });
 
-
+            var audio_file = new Audio("../assets/waves.mp3");
             audio_file.play();
             audio_file.volume = .4;
             audio_file.addEventListener('timeupdate', function () {
