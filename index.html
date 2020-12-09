@@ -19,21 +19,13 @@
             }
         });
 
-        AFRAME.registerComponent('navigate-on-click', {
-            schema: {
-                url: { default: '' }
-            },
-
+        AFRAME.registerComponent("mylink", {
             init: function () {
-                var data = this.data;
-                var el = this.el;
-
-                el.addEventListener('click', function () {
-                    window.open(data.url);
-                });
-
+                this.el.addEventListener("click", (e) => {
+                    window.location = this.data.href;
+                })
             }
-        });
+        })
 
     </script>
 </head>
@@ -129,11 +121,10 @@
                     </a-image>
 
                     <!-- CTA -->
-                    <a-entity navigate-on-click="url: http://google.com">
+                    <a-entity mylink="href: https://www.google.com.br;">
                         <a-image src="#cta-line-1" position="2.230 1.8 -1" scale="1 .5 1" rotation="-10 0 0"
                             material="alphaTest: 0.5"
-                            animation="property: rotation; to: -10 360 -0; loop: true; easing: linear; dur: 4000"
-                            >
+                            animation="property: rotation; to: -10 360 -0; loop: true; easing: linear; dur: 4000">
                         </a-image>
                         <a-image src="#cta-line-2" position="2.230 1.8 -1" scale="1 .5 1" rotation="-10 0 0"
                             material="alphaTest: 0.5"
