@@ -52,7 +52,7 @@
         <!-- <audio id="flock-audio" src="assets/flock.mp3" autoplay loop></audio> -->
         <!-- <audio id="sea-audio" src="assets/WavesLoops_Agitado_v3.mp3" autoplay loop></audio> -->
         <!-- <audio id="waves-audio" src="assets/waves.mp3" autoplay loop></audio> -->
-        <a-scene vr-mode-ui="enabled: false" cursor="rayOrigin: mouse; fuse: false;">
+        <a-scene vr-mode-ui="enabled: false" cursor="rayOrigin: mouse;">
             <!-- <a-sound src="src: url(assets/waves.mp3)" autoplay="true" loop="true"></a-sound> -->
             <!-- ASSETS -->
             <!-- <a-asset-item id="seagull" src="assets/scene.gltf"></a-asset-item> -->
@@ -137,7 +137,8 @@
                     </a-image>
 
                     <!-- CTA -->
-                    <a-entity mylink="href: https://conteudo.digitalbusiness.com.br/palestra-amyr-klink;">
+                    <a-entity mylink="href: https://conteudo.digitalbusiness.com.br/palestra-amyr-klink;"
+                        animation="autoplay: false; startEvents: click; property: position; to: 0 0.05 0; loop: 1; dir: alternate; easing: easeOutCubic; dur: 100">
                         <a-image src="#cta-line-1" position="2.230 1.8 -1" scale="1 .5 1" rotation="-10 0 0"
                             material="alphaTest: 0.5"
                             animation="property: rotation; to: -10 360 -0; loop: true; easing: linear; dur: 4000">
